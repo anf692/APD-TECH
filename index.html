@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APD-Tech | Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+</head>
+<body class="bg-blue-50">
+
+    <!--entete -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-gradient-blue rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                    A-T
+                </div>
+                <span class="text-xl font-bold text-gradient-blue">APD-TECH</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Accueil</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Réalisations</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Équipe</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-700" id="menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Accueil</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Réalisations</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Équipe</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- container -->
+    <main>
+         <!-- Page Accueil -->
+        <section id="accueil" class="py-16 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0 slide">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                            Créativité & <span class="text-gradient-blue">Innovation</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Nous sommes une équipe passionnée dédiée à la création de solutions digitales innovantes. 
+                            Notre expertise nous permet de répondre à tous vos besoins en développement web, Analyse de données, Marketing  digital et design.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#realisations" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all hover-scale">
+                                Nos réalisations
+                            </a>
+                            <a href="#contact" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-all hover-scale">
+                                Nous contacter
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 slide">
+                        <div class="slider-container hover-scale">
+                            <!-- Slide 1 -->
+                            <div class="slider-slide active" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                                <div class="slider-content">
+                                    <h3 class="text-2xl font-bold mb-2">Design Innovant</h3>
+                                    <p class="text-white">Des interfaces utilisateur intuitives et modernes</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="slider-slide" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                                <div class="slider-content">
+                                    <h3 class="text-2xl font-bold mb-2">Développement Web et Analyse de données</h3>
+                                    <p class="text-white">Solutions sur mesure pour votre entreprise</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="slider-slide" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80')">
+                                <div class="slider-content">
+                                    <h3 class="text-2xl font-bold mb-2">Stratégie Digitale</h3>
+                                    <p class="text-white">Approche globale pour votre présence en ligne</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider controls -->
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 slider-dot active" data-slide="0"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 slider-dot" data-slide="1"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 slider-dot" data-slide="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section
+
+         <!-- Page Réalisations -->
+        <section id="realisations" class="py-16 px-4 bg-blue-100">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos Réalisations</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projet 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover transition-all hover-scale">
+                        <img src="./images/wergu.JPG" 
+                             alt="wergu" 
+                             class="project-img">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Design Figma</h3>
+                            <p class="text-gray-600 mb-4">Site vitrine moderne avec design responsive pour une clinique.</p>
+                            <a href="#" class="text-blue-600 font-medium hover:text-blue-700 flex items-center">
+                                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover transition-all hover-scale">
+                        <img src="./images/wave.JPG" 
+                             alt="wave" 
+                             class="project-img">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Application Mobile</h3>
+                            <p class="text-gray-600 mb-4">Application mobile pour l'entreprise Wave Senegal.</p>
+                            <a href="#" class="text-blue-600 font-medium hover:text-blue-700 flex items-center">
+                                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover transition-all hover-scale">
+                        <img src="./images/eshop.JPG" 
+                             alt="Boutique en ligne" 
+                             class="project-img">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Boutique en ligne</h3>
+                            <p class="text-gray-600 mb-4">Plateforme e-commerce complète avec système de paiement intégré.</p>
+                            <a href="#" class="text-blue-600 font-medium hover:text-blue-700 flex items-center">
+                                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all hover-scale">
+                        Voir toutes nos réalisations
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page Équipe -->
+        <section id="equipe" class="py-16 px-4">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Notre Équipe</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Membre 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md text-center p-6 card-hover transition-all hover-scale">
+                        <img src="./images/ndeye khady.jpg" alt="Ndeye khady" class="member-img mx-auto mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ndeye khady GEUYE</h3>
+                        <p class="text-blue-600 font-medium mb-4">Developpeuse et data scientist</p>
+                        <p class="text-gray-600 mb-4">Créative et minutieuse, elle donne vie à vos projet web et mobile.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fas fa-envelope text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membre 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md text-center p-6 card-hover transition-all hover-scale">
+                        <img src="./images/zou.JPG" alt="Assane Ndong FALL" class="member-img mx-auto mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fatou FAYE</h3>
+                        <p class="text-blue-600 font-medium mb-4">Développeuse Back-end</p>
+                        <p class="text-gray-600 mb-4">Expert en Django et bases de données, architecte de solutions robustes.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fas fa-envelope text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membre 4 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md text-center p-6 card-hover transition-all hover-scale">
+                        <img src="./images/zou.JPG" alt="Assane Ndong FALL" class="member-img mx-auto mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Assane Ndong FALL</h3>
+                        <p class="text-blue-600 font-medium mb-4">Data Analyste / UX-UI Design</p>
+                        <p class="text-gray-600 mb-4">Specialiser dans l'analyse et la visualisation des données avec Python et le Web Design</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fas fa-envelope text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membre 5 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md text-center p-6 card-hover transition-all hover-scale">
+                        <img src="./images/KONARE.jpg" alt="sabake konare" class="member-img mx-auto mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sabake KONARE</h3>
+                        <p class="text-blue-600 font-medium mb-4">Développeur Full-stack</p>
+                        <p class="text-gray-600 mb-4">Polyvalent avec une expertise en JavaScript et architecture logicielle.</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fas fa-envelope text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membre 6 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md text-center p-6 card-hover transition-all hover-scale">
+                        <img src="./images/paulette.jpg" alt="Paulette gomis" class="member-img mx-auto mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Paulette Germaine GOMIS</h3>
+                        <p class="text-blue-600 font-medium mb-4">Developpeuse Front-end</p>
+                        <p class="text-gray-600 mb-4">Talentueuse dans le developpemen d'application web .</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fas fa-envelope text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Contact -->
+        <section id="contact" class="py-16 px-4 bg-blue-100">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Contactez-nous</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="lg:w-1/2">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Nos coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Adresse</h4>
+                                    <p class="text-gray-600">ISEP Amadou Traware <br>de Diamniadio Senegal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Téléphone</h4>
+                                    <p class="text-gray-600">+221 77 000 00 00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">contact@apdtech.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mt-10 mb-6">Suivez-nous</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Votre nom">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Votre email">
+                            </div>
+                           
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Votre message"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all w-full hover-scale">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer  -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="w-10 h-10 bg-gradient-blue rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                            A-T
+                        </div>
+                        <span class="text-xl font-bold">APD-TECH</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">
+                        Créativité et innovation au service de vos projets digitaux.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 APD-TECH. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+   
+</body>
+</html>
