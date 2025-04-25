@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réalisations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-blue: #3b82f6;
+      --light-blue: #60a5fa;
+      --dark-blue: #2563eb;
+      --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      margin: 0;
+    }
+
+    .text-gradient-blue {
+      background: var(--gradient-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 192px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-300 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+          A-T
+        </div>
+        <span class="text-xl font-bold text-gradient-blue">APD-TECH</span>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Accueil</a>
+        <a href="realisations.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Réalisations</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Équipe</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Contact</a>
+      </nav>
+      <button class="md:hidden text-gray-700" id="menu-btn">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+      <!-- Menu mobile si besoin -->
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="px-6 py-10">
+    <h2 class="text-3xl font-bold text-gradient-blue text-center">Nos Réalisations</h2>
+
+    <div class="gallery">
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/eshop.JPG" alt="Projet 1" class="project-img">
+        <div class="card-content">
+          <h3 class="text-lg font-semibold">Boutique en ligne</h3>
+          <p class="text-gray-600">Dans le cadre de l’évolution de mon site vitrine, j’ai réalisé une boutique en ligne permettant aux visiteurs de découvrir et d’acheter facilement les produits proposés. Le projet comprend une interface utilisateur simple et intuitive, un catalogue produit dynamique, un système de panier, ainsi qu’un module de commande. Cette boutique vise à améliorer l’expérience client tout en offrant à l’entreprise un canal de vente supplémentaire.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/wave.JPG" alt="Projet 2" class="project-img">
+        <div class="card-content">
+          <h3 class="text-lg font-semibold">Application Mobile</h3>
+          <p class="text-gray-600">Dans le cadre de la digitalisation de mon site vitrine, j’ai développé une application mobile multiplateforme avec Flutter. Cette application permet aux utilisateurs de consulter les informations de l’entreprise, découvrir les produits et services, et rester informés grâce à un système de notifications push.
+            Parmi les principales fonctionnalités :
+            
+            Interface moderne et responsive
+            
+            Intégration des contenus du site vitrine
+            
+            Formulaire de contact et de prise de rendez-vous
+            
+            Carte interactive pour localiser l’entreprise
+            
+            Notifications pour les actualités et offres spéciales
+            
+            L’application est connectée à une base de données en ligne (Firebase) pour une mise à jour en temps réel des contenus. Ce projet a pour objectif de renforcer la présence mobile de l’entreprise et de faciliter la communication avec les clients.</p>
+        </div>
+      </div>
+
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/wergu.JPG" alt="Projet 3" class="project-img">
+        <div class="card-content">
+          <h3 class="text-lg font-semibold">Design Figma</h3>
+          <p class="text-gray-600">J’ai réalisé le design de l’interface utilisateur (UI) de mon site vitrine à l’aide de Figma, un outil de maquettage collaboratif. Ce travail m’a permis de concevoir une maquette moderne, claire et responsive, en mettant l’accent sur l’expérience utilisateur (UX). Le design inclut les principales sections du site : page d’accueil, présentation de l’entreprise, services, galerie, et contact. Chaque élément a été pensé pour refléter l’identité visuelle de la marque et optimiser la navigation.</p>
+        </div>
+      </div>
+
+      <!-- Réalisation 4 -->
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/dev.jpg" alt="Projet 4" class="project-img">
+        <div class="card-content">
+            <h3 class="text-lg font-semibold">le développement de logiciels</h3>
+            <p class="text-gray-600">Dans le cadre de la digitalisation des processus internes, j’ai développé un logiciel de gestion multiplateforme à l’aide de Flutter pour l’interface et Firebase pour le backend. Ce logiciel permet de gérer efficacement les utilisateurs, les données clients, les stocks et les rapports.
+                Parmi ses principales fonctionnalités :
+                
+                Tableau de bord interactif
+                
+                Authentification sécurisée (Firebase Auth)
+                
+                Base de données en temps réel (Cloud Firestore)
+                
+                Génération automatique de rapports
+                
+                Notifications push pour les rappels et mises à jour
+                
+                Le projet a été conçu avec une attention particulière à l’ergonomie, à la performance, et à la scalabilité du système. Il répond aux besoins d'une entreprise souhaitant automatiser ses tâches courantes tout en restant mobile.
+                
+                </p>
+        </div>
+      </div>
+
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/base.jpg" alt="Projet 4" class="project-img">
+        <div class="card-content">
+            <h3 class="text-lg font-semibold">la création de bases de données</h3>
+            <p class="text-gray-600">J’ai conçu et mis en place une base de données relationnelle destinée à structurer, stocker et gérer efficacement les données d’une application. Le projet a débuté par une analyse des besoins, suivie de la modélisation avec un MCD et un MLD, puis la création physique de la base via MySQL (ou PostgreSQL/SQLite selon le cas).
+                Les étapes clés comprenaient :
+                
+                La définition des entités et des relations
+                
+                L’optimisation des requêtes SQL
+                
+                La gestion des contraintes d’intégrité
+                
+                La mise en place de procédures stockées et de vues
+                
+                La sécurisation des accès utilisateurs
+                
+                Cette base de données est au cœur du fonctionnement de l’application et permet une gestion rapide, fiable et évolutive des informations.</p>
+        </div>
+      </div>
+
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/don.jpg" alt="Projet 4" class="project-img">
+        <div class="card-content">
+            <h3 class="text-lg font-semibold">Application de don de sang</h3>
+            <p class="text-gray-600">J’ai développé une application mobile dédiée au don de sang dans le but de faciliter l'accès aux informations pour les donneurs et les établissements de santé. L’application permet aux utilisateurs de s'inscrire en tant que donneur, de consulter les centres de don à proximité, de planifier et réserver des créneaux pour leurs dons, et de recevoir des notifications de rappels.
+                L’application comprend également une base de données en temps réel pour gérer les informations des donneurs, des stocks de sang, et des réservations. Elle utilise Flutter pour garantir une expérience fluide et multiplateforme (iOS et Android), avec un backend sécurisé via Firebase pour les notifications et la gestion des données.
+                Ce projet vise à encourager le don de sang en simplifiant le processus pour les donneurs et en assurant une meilleure gestion des stocks pour les établissements médicaux.</p>
+        </div>
+      </div>
+
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/phar.jpg" alt="Projet 4" class="project-img">
+        <div class="card-content">
+            <h3 class="text-lg font-semibold">Site de pharmacie</h3>
+            <p class="text-gray-600">J’ai développé un site web de pharmacie afin de permettre aux clients de consulter une large gamme de médicaments, produits de santé et services pharmaceutiques en ligne. Le site offre une interface conviviale avec un catalogue de produits détaillé, une fonctionnalité de recherche avancée, ainsi qu’une option de commande en ligne avec livraison à domicile.
+                L’interface est optimisée pour une navigation fluide sur tous types d’appareils, et le système de paiement en ligne est sécurisé. En plus de la vente de médicaments, le site propose des services comme la consultation de prescriptions et la possibilité de prendre des rendez-vous pour des conseils pharmaceutiques.
+                Le projet a été conçu avec une attention particulière à la sécurité des données médicales et à l’expérience utilisateur, en respectant les normes de confidentialité et de régulation en vigueur.
+                
+                </p>
+        </div>
+      </div>
+      <div class="card card-hover transition-all hover-scale">
+        <img src="./images/sama.png" alt="Projet 4" class="project-img">
+        <div class="card-content">
+            <h3 class="text-lg font-semibold">Application sama casier</h3>
+            <p class="text-gray-600">J’ai développé l’application Sama Casier pour faciliter la gestion des casiers dans divers environnements comme les écoles, les bureaux ou les centres sportifs. Cette application permet aux utilisateurs de réserver, gérer et libérer un casier de manière simple et rapide, tout en offrant une interface claire et intuitive.
+                Parmi les principales fonctionnalités :
+                
+                Réservation de casiers : Permet aux utilisateurs de réserver un casier pour une période définie.
+                
+                Gestion des disponibilités : Visualisation en temps réel des casiers libres ou occupés.
+                
+                Notifications : Alertes pour rappeler aux utilisateurs de libérer leur casier ou de renouveler la réservation.
+                
+                Suivi des casiers : Historique des réservations et gestion des conflits de réservation.
+                
+                Interface utilisateur optimisée : Accessible sur mobile et bureau, avec une interface simple, conçue avec Flutter pour une expérience multiplateforme.
+                
+                Le projet vise à améliorer l’organisation des espaces de stockage et à simplifier le processus de gestion des casiers, tout en offrant aux utilisateurs un service pratique et efficace.</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-300 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+              A-T
+            </div>
+            <span class="text-xl font-bold">APD-TECH</span>
+          </div>
+          <p class="text-gray-400 mt-2">Créativité et innovation au service de vos projets digitaux.</p>
+        </div>
+
+        <div class="flex space-x-6 mb-6 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white transition-all text-xl"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 APD-TECH. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
