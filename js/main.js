@@ -6,7 +6,7 @@
       mobileMenu.classList.toggle('hidden');
   });
 
-  // Slider functionality
+  // Slider
   const sliderDots = document.querySelectorAll('.slider-dot');
   const slides = document.querySelectorAll('.slider-slide');
   let currentSlide = 0;
@@ -25,16 +25,16 @@
       showSlide(currentSlide + 1);
   }
 
-  // Auto-rotate slides every 5 seconds
+  // Auto-rotation par 5 seconde
   function startSlider() {
       slideInterval = setInterval(nextSlide, 5000);
   }
 
-  // Initialize slider
+  // Initialisation
   showSlide(0);
   startSlider();
 
-  // Add click event to dots
+
   sliderDots.forEach(dot => {
       dot.addEventListener('click', () => {
           clearInterval(slideInterval);
@@ -43,7 +43,7 @@
       });
   });
 
-  // Pause on hover
+  // Pause
   const sliderContainer = document.querySelector('.slider-container');
   sliderContainer.addEventListener('mouseenter', () => {
       clearInterval(slideInterval);
@@ -53,7 +53,7 @@
       startSlider();
   });
 
-  // Smooth scrolling for anchor links
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -62,12 +62,12 @@
               behavior: 'smooth'
           });
           
-          // Close mobile menu if open
+          // l'onglet  menu mobile est ouvert
           mobileMenu.classList.add('hidden');
       });
   });
 
-  // Form submission
+  // Formulaire
   const contactForm = document.querySelector('form');
   if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
