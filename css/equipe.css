@@ -1,0 +1,141 @@
+/* Corps de la page */
+body {
+  background-color: #e3f2fd; /* bleu clair */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  max-width: 1200px;
+}
+
+header .text-gradient-blue {
+  color: #1e3a8a; /* bleu */
+}
+
+/* Menu */
+nav a {
+  color: #4b5563; /* gris foncé */
+}
+
+nav a:hover {
+  color: #2563eb; /* bleu clair */
+}
+
+button#menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4b5563;
+}
+
+/* Mobile menu */
+#mobile-menu {
+  display: none;
+}
+
+/* Section Équipe */
+#equipe {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#equipe .text-center h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937; /* gris foncé */
+}
+
+#equipe .w-20 {
+  height: 2px;
+  background-color: #2563eb; /* bleu clair */
+  margin: 0 auto;
+}
+
+#equipe .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards des membres */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover .member-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #2563eb; /* bleu clair */
+  margin-bottom: 1.5rem;
+}
+
+.card-hover h3 {
+  font-size: 1.25rem;
+  color: #1f2937; /* gris foncé */
+}
+
+.card-hover p {
+  color: #4b5563; /* gris moyen */
+}
+
+.card-hover .text-blue-600 {
+  color: #2563eb; /* bleu clair */
+}
+
+.card-hover .text-gray-500 {
+  color: #6b7280; /* gris clair */
+}
+
+.card-hover .text-gray-500:hover {
+  color: #2563eb; /* bleu clair */
+}
+
+/* Espacement et alignement des icônes */
+.card-hover .flex {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-hover .fab, .card-hover .fas {
+  font-size: 1.5rem;
+}
+
+/* Style pour les icônes de LinkedIn, GitHub, Email */
+.card-hover a:hover {
+  color: #2563eb; /* bleu clair */
+}
+
+/* Responsivité pour mobile */
+@media (max-width: 768px) {
+  #equipe .text-center h2 {
+      font-size: 1.5rem;
+  }
+
+  #equipe .grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  #mobile-menu {
+      display: block;
+  }
+
+  /* Mobile navigation */
+  #mobile-menu a {
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+  }
+}
