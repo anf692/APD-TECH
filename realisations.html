@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>APD-TECH | Réalisations</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./css/realiser.css">  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APD-Tech | Realisations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
-<body>
-   <!--entete -->
-   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center">
-            <div class="w-12 h-12 bg-gradient-blue rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
-                A-T
+<body class="bg-blue-50">
+
+    <!--entete -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-gradient-blue rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                    A-T
+                </div>
+                <span class="text-xl font-bold text-gradient-blue">APD-TECH</span>
             </div>
-            <span class="text-xl font-bold text-gradient-blue">APD-TECH</span>
+            <nav class="hidden md:flex space-x-8">
+                <a href="./index.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Accueil</a>
+                <a href="./realisations.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Réalisations</a>
+                <a href="equipe.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Équipe</a>
+                <a href="./contact.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Contact</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">À propos</a>
+            </nav>
+            <button class="md:hidden text-gray-700" id="menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
-        <nav class="hidden md:flex space-x-8">
-            <a href="./index.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Accueil</a>
-            <a href="./realisations.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Réalisations</a>
-            <a href="equipe.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Équipe</a>
-            <a href="./contact.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">Contact</a>
-            <a href="apropos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">À propos</a>
-        </nav>
-        <button class="md:hidden text-gray-700" id="menu-btn">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
-        <div class="flex flex-col space-y-4">
-            <a href="./index.html" class="text-gray-700 hover:text-blue-600 font-medium">Accueil</a>
-            <a href="./realisations.html" class="text-gray-700 hover:text-blue-600 font-medium">Réalisations</a>
-            <a href="./equipe.html" class="text-gray-700 hover:text-blue-600 font-medium">Équipe</a>
-            <a href="./contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-            <a href="apropos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">À propos</a>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="./index.html" class="text-gray-700 hover:text-blue-600 font-medium">Accueil</a>
+                <a href="./realisations.html" class="text-gray-700 hover:text-blue-600 font-medium">Réalisations</a>
+                <a href="./equipe.html" class="text-gray-700 hover:text-blue-600 font-medium">Équipe</a>
+                <a href="./contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="apropos.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all">À propos</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
   <!-- Main -->
   <main class="px-6 py-10">
